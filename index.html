@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" content="light" id="meta">
+	<title> Tasks List!</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+	<header>
+
+		<div class="left">
+			<span>
+				Hello World!
+			</span>
+			<span class="time">
+				
+			</span>
+		</div>
+		<div class="right">
+			<label class='fa fa-moon' id="bulan">
+			</div>
+		</header>
+		<h3 align="center">
+			<span class="tasks">Just Do</span> <span class="list">It!</span>
+		</h3>
+		<main>
+			<div class="form-input">
+				<button type="submit" id="newList"> Create New List!</button>
+			</div>
+
+			<div class="container">
+			<!-- <div class="card">
+				<h4>
+					<div class="activityName">
+						Trip To Paris <i class='fa fa-trash' id='removeCard'></i>
+					</div>
+					<span class="tgl">
+						08 January 2002
+					</span>
+				</h4>
+				<div class="listActivity">
+					<span class="activity done">
+						Buy milk 
+						<i class='fa fa-trash'></i>
+					</span>
+					<input type="text" class="inputActivity" placeholder="new activity">
+				</div>
+				<div class="card-footer">
+					<label class="fa fa-plus" id="addActivity"></label>
+				</div>
+			</div> -->
+		</div>
+	</main>
+
+
+	<div class="modal">
+		<div class="modal-body">
+			<div id="modal-header">
+				<h4>
+					Create New List
+				</h4>
+				<span id="close" class="fa fa-close">
+				</span>
+			</div>
+
+			<label for='color'>Color Card</label>
+			<input type="color" id="color">
+
+			<label for="nameActivity">Name Activity</label>
+			<input type="text" id="nameActivity" placeholder=" &nbsp; Name Activity" autocomplete="off">
+
+			<label for="tgl"> Date </label>
+			<input type="date" id="tgl">
+
+			<button id="addList">Add</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

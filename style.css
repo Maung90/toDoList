@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Source+Code+Pro&family=Poppins&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: 'Poppins', sans-serif;
+}
+header{
+	height: 8vh;
+	font-family: 'Source Code Pro', monospace;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #1d99ff;
+	box-shadow: 5px 5px 5px rgba(0, 0, 	0, 	0.1);
+}
+header .left {
+	display: flex;
+	flex-wrap: wrap;
+	width: 150px;
+	font-size: 3vw;
+}
+header .left span:first-child{
+	font-size: 5vw;
+	color: white;
+}
+
+.fa-sun{
+	color: 	#D8D8CC;
+	cursor: pointer;
+}
+.fa-moon{
+	color: 	#383737;
+	cursor: pointer;
+}
+h3{
+	font-size: 30px;
+	font-weight: normal;
+	margin-top: 5%;
+}
+h3 span{
+	font-family: 'Borel', cursive;
+}
+h3 span.list{
+	color: grey;
+}
+.form-input{
+	display: flex;
+	justify-content: center;
+}
+#newList{
+	margin-top: 5%;
+	background: none;
+	border: 1px solid #e0e0e2;
+	padding: 10px;
+	font-weight: 530;
+	cursor: pointer;
+}
+#newList:focus,#newList:hover{
+	transition: 0.5s;
+	color: #e0e0e2;
+	background-color: #1c1b22;
+}
+.modal{
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(5px);
+	display: none;
+	justify-content: center; 
+/*	transform: translateX(100%);*/
+}
+
+.modal-body{
+	transform: translate(100%, 10vh);	 
+	height: 45vh;
+	padding: 20px;
+	width: 80%;
+	background-color: white;
+}
+.modal-body label{
+	display: block;
+	margin: 10px;
+}
+.modal-body #modal-header{
+	display: flex;
+	justify-content: space-between; 
+	margin-bottom: 10%;
+}
+.modal-body #modal-header #close{
+	cursor: pointer;
+
+}
+.modal-body input#color{
+	width: 35px;
+	height: 35px;
+}
+.modal-body input{
+	width: 80%;
+	border: 1px solid #e0e0e2;
+	height: 30px;
+	padding: 5px;
+}
+.modal-body input:focus{ 
+	outline: 1px solid #B2ADAD;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.modal-body #addList{
+	padding: 10px;
+	background-color: #e13535;
+	border: none;
+	width: 150px;
+	color: white;
+	margin: 15px 0 ;
+	cursor: pointer;
+}
+.modal-body #addList:hover{
+	transition: 0.5s;
+	background-color: #CF3535;
+}
+.container{
+	margin-top: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.container .card	{
+	padding: 20px;
+	width: 55%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #3a2b86;
+	border-radius: 5px;
+	color: white;
+	margin: 20px 0 ;
+}
+.container .card	.activityName #removeCard{
+	cursor: pointer;
+}
+.container .card	.activityName{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 55vw;
+
+}
+.container .card	span.tgl{
+	font-size: 13px;
+	font-weight: 200;
+	font-style: italic;
+	color:#c4c4c4 ;
+}
+.container .card	.listActivity{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 10%;
+}
+.container .card	.listActivity .activity{
+	justify-content: space-between;
+	align-items: center;
+	text-transform: capitalize;
+	padding: 4px; 
+	display: flex;
+	flex-wrap: nowrap;
+	width: 55vw;
+} 
+.container .card	.listActivity i.fa{
+	cursor: pointer;
+}
+.container .card	.listActivity .done{
+/*	text-decoration: line-through;*/
+color: #c4c4c4;
+font-style: italic;
+position: relative;
+/*	cursor: unset;*/
+}
+
+.container .card	.listActivity .done::after{
+/*	transition: 0.5s;*/
+content: "";
+position: absolute;
+top: 50%;
+left: 0%;
+width: 100%;
+height: 1px;
+background-color: white; 
+}
+
+.container .card	.listActivity .inputActivity{
+	margin-top: 5px;
+	width: 80%;
+	background-color: transparent;
+	border:1px solid white;
+	padding: 5px;
+	color: white;
+}
+
+.container .card	.listActivity .inputActivity:focus{
+	outline: none;
+}
+
+.container .card .card-footer{
+	margin-top: 50px;
+	display: flex;
+	width: 100%;
+	justify-content: right;
+}
+.container .card .card-footer #addActivity{
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 50%;
+}
+
+@media (min-width: 768px){
+	.modal-body{
+		height: 55vh;
+	}
+	.modal-body #modal-header{
+		margin-bottom: 5%;
+	}
+	.container{
+		margin-top: 5%;
+	}
+}
+
+
+@media (min-width: 1024px){
+	.modal-body{
+		max-height: 55vh;
+	}
+}
